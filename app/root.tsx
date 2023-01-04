@@ -15,6 +15,8 @@ import {
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
+import Header from "./shared/components/Header";
+
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
@@ -39,6 +41,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+      < Header />
       <body className="h-full">
         <Outlet />
         <ScrollRestoration />
