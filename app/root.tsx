@@ -41,7 +41,6 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      < Header />
       <body className="h-full">
         <Outlet />
         <ScrollRestoration />
