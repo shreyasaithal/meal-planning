@@ -46,12 +46,14 @@ export default function NewIngredientPage() {
       <div>
         <label className="flex w-full flex-col gap-1">
           <span>Category: </span>
-          <select>
-            <option value="vegetable">Vegetable</option>
-            <option value="meat-dairy">Meat / Dairy</option>
-            <option selected value="pantry">Pantry</option>
-            <option value="other">Other</option>
-        </select>
+          <select 
+            name="category" 
+            className="flex-1 rounded-md border-2 border-blue-500 px-3 text-lg leading-loose">
+                <option value="vegetable">Vegetable</option>
+                <option value="meat-dairy">Meat / Dairy</option>
+                <option selected value="pantry">Pantry</option>
+                <option value="other">Other</option>
+            </select>
         </label>
       </div>
 
