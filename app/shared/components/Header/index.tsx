@@ -5,9 +5,9 @@ import { Form, Link, NavLink, Outlet, useLoaderData } from "@remix-run/react";
 export default function Header() {
     const user = useUser();
     return (
-      <header className="flex items-center justify-between bg-slate-800 p-4 text-white">
+      <header className="flex items-left justify-between bg-slate-800 p-4 text-white">
         <Link to="/notes">Notes</Link>
-        <Link to="/ingredients">Notes</Link>
+        <Link to="/ingredients">Ingredients</Link>
 
         <p>{user.email}</p>
         <Form action="/logout" method="post">
