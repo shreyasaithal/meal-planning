@@ -5,7 +5,7 @@ import type { Note } from "~/models/note.server";
 import { getNoteListItems } from "~/models/note.server";
 import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
-import { Header } from "/";
+import { Header } from "~/routes";
 
 type LoaderData = {
   noteListItems: Note[];
