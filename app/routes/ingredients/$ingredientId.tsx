@@ -12,7 +12,7 @@ type LoaderData = {
 
 export async function loader({ request, params }: LoaderArgs) {
   const userId = await requireUserId(request);
-  invariant(params.ingredient, "ingredientId not found");
+  invariant(params.ingredientId, "ingredientId not found");
 
   const ingredient = await getIngredient({ userId, id: params.ingredientId });
   if (!ingredient) {
