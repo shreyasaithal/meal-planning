@@ -55,7 +55,7 @@ export async function getIngredient({
   userId,
 }: Pick<Ingredient, "id"> & { userId: User["id"] }) {
   const { data, error } = await supabase
-    .from("ingredient")
+    .from("ingredients")
     .select("*")
     .eq("profile_id", userId)
     .eq("id", id)
