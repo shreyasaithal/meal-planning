@@ -39,6 +39,7 @@
     "@testing-library/cypress": "^8.0.3",
     "bcryptjs": "^2.4.3",
     "cypress": "^10.4.0",
+    "date-fns": "^2.29.3",
     "react": "^18.2.0",
     "react-data-grid": "^7.0.0-beta.20",
     "react-dom": "^18.2.0",
