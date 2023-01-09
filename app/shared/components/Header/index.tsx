@@ -5,8 +5,8 @@ import { Form, Link, NavLink, Outlet, useLoaderData } from "@remix-run/react";
 export default function Header() {
     const user = useUser();
     return (
-      <header className="bg-slate-800 text-white">
-        <div class="grid grid-cols-12 gap-6">
+      <header className="bg-slate-800 text-white py-8">
+        <div class="grid grid-cols-12 gap-6 align-middle">
           <div class="justify-items-start col-span-8">
             <Link to="/meals">Meal Plan</Link>
             <Link to="/ingredients">Ingredients</Link>
