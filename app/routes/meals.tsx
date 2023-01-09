@@ -20,7 +20,7 @@ export async function loader ({ request }: LoaderArgs) {
 export default function Index() {
   const data = useLoaderData<typeof loader>() as LoaderData;
   
-  let rows = data.map((meal) => {
+  let rows = data.mealItems.map((meal) => {
     return {
         id: meal.id,
         date: meal.date,
