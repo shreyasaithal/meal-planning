@@ -25,7 +25,7 @@ export default function Index() {
   let rows = data.mealItems.map((meal) => {
     return {
         id: meal.id,
-        date: format(meal.date, 'dd/mm/yyyy'),
+        date: format(Date(meal.date), 'dd/mm/yyyy'),
         lunch: meal.lunch,
         dinner: meal.dinner,
     }
@@ -41,7 +41,7 @@ export default function Index() {
     <div>
         <Header />
         <section id="DataGrid" style={{ height: 350, width: '50%', marginLeft: 'auto', marginRight: 'auto' }}>
-            <DataGrid rows={rows} columns={columns} />
+            <DataGrid rows={rows} columns={columns} sx={{ m: 2 }}/>
         </section>
 
     </div>
