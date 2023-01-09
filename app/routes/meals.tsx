@@ -5,7 +5,7 @@ import type { Meal } from "~/models/meal.server";
 import { getMeals } from "~/models/meal.server";
 import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
-
+import Header from "../shared/components/Header";
 
 type LoaderData = {
   mealItems: Meal[];
@@ -37,12 +37,9 @@ export default function Index() {
 
  return (
     <div>
-        <header>
-        <h1>DataGrid Component</h1>
-        </header>
-
+        <Header />
         <section id="DataGrid" style={{ height: 350, width: '50%', marginLeft: 'auto', marginRight: 'auto' }}>
-            <DataGrid rows={rows} columns={columns} sx={{backgroundColor: "#caffca"}}/>
+            <DataGrid rows={rows} columns={columns} />
         </section>
 
     </div>
