@@ -7,13 +7,13 @@ export default function Header() {
     return (
       <header className="flex bg-slate-800 p-4 text-white">
         <div class="grid grid-cols-12 gap-4">
-          <div>
+          <div class="col-span-2">
             <Link to="/meals">Meal Plan</Link>
           </div>
-          <div>
+          <div class="col-span-2">
             <Link to="/ingredients">Ingredients</Link>
           </div>
-          <div class="grow col-span-4">
+          <div class="col-span-4">
             <p>{user.email}</p>
           </div>
           <div class="col-span-4">
