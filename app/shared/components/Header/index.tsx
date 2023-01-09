@@ -13,7 +13,7 @@ export default function Header() {
           <div>
             <Link to="/ingredients">Ingredients</Link>
           </div>
-          <div class="col-span-4">
+          <div class="grow col-span-4">
             <p>{user.email}</p>
           </div>
           <div class="col-span-4">
