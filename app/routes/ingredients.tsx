@@ -7,6 +7,7 @@ import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
 import Header from "../shared/components/Header";
 
+
 type LoaderData = {
   ingredientItems: Ingredient[];
 };
