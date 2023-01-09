@@ -7,14 +7,13 @@ export default function Header() {
     return (
       <header className="bg-slate-800 text-white py-8">
         <div class="grid grid-cols-12 gap-6 align-middle">
-          <div class="px-6">
+          <div class="col-span-4 px-4">
             <Link to="/meals">Meal Plan</Link>
           </div>
-          <div class="px-6">
+          <div class="col-span-4 px-4">
             <Link to="/ingredients">Ingredients</Link>
           </div>
-          <div class="justify-items-end col-span-4 px-6px6">
-            <p>{user.email}</p>
+          <div class="justify-items-end col-span-4 px-6">
             <Form action="/logout" method="post">
             <button
               type="submit"
