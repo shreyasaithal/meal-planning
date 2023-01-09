@@ -7,16 +7,12 @@ export default function Header() {
     return (
       <header className="bg-slate-800 text-white">
         <div class="grid grid-cols-12 gap-6">
-          <div class="col-span-2">
+          <div class="justify-items-start col-span-8">
             <Link to="/meals">Meal Plan</Link>
-          </div>
-          <div class="col-span-2">
             <Link to="/ingredients">Ingredients</Link>
           </div>
-          <div class="col-span-4">
+          <div class="justify-items-end col-span-4">
             <p>{user.email}</p>
-          </div>
-          <div class="col-span-4">
             <Form action="/logout" method="post">
             <button
               type="submit"
