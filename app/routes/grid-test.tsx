@@ -8,16 +8,6 @@ import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
 import Header from "../shared/components/Header";
 
-type LoaderData = {
-  noteListItems: Note[];
-};
-
-export async function loader ({ request }: LoaderArgs) {
-  const userId = await requireUserId(request);
-  const noteListItems = await getNoteListItems({ userId });
-  return json({ noteListItems });
-};
-
 const columns = [
   { key: 'id', name: 'ID' },
   { key: 'title', name: 'Title' }
@@ -29,8 +19,6 @@ const rows = [
 ];
 
 export default function NotesPage() {
-  const data = useLoaderData<typeof loader>() as LoaderData;
-
   return (
     <div>
       <Header />
