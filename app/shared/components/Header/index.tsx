@@ -26,6 +26,7 @@ export default function Header() {
             </button>
             </Form>
           </div>
+          </div>
       </header>
     );
   }
