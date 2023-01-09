@@ -6,17 +6,17 @@ export default function Header() {
     const user = useUser();
     return (
       <header className="flex bg-slate-800 p-4 text-white">
-        <div class="grid grid-cols-6 gap-4">
+        <div class="grid grid-cols-12 gap-4">
           <div>
             <Link to="/meals">Meal Plan</Link>
           </div>
           <div>
             <Link to="/ingredients">Ingredients</Link>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-4">
             <p>{user.email}</p>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-4">
             <Form action="/logout" method="post">
             <button
               type="submit"
