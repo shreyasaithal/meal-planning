@@ -5,7 +5,7 @@ import { Form, Link, NavLink, Outlet, useLoaderData } from "@remix-run/react";
 export default function Header() {
     const user = useUser();
     return (
-      <header className="flex bg-slate-800 p-4 text-white">
+      <header className="bg-slate-800 text-white">
         <div class="grid grid-cols-12 gap-6">
           <div class="col-span-2">
             <Link to="/meals">Meal Plan</Link>
