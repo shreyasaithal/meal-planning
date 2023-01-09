@@ -32,6 +32,9 @@ export default function Index() {
     {field: 'date', headerName: 'Date', flex: 1},
     {field: 'lunch', headerName: 'Lunch', flex: 1, editable: true},
     {field: 'dinner', headerName: 'Dinner', flex: 1, editable: true},
+    {field: 'cuisine', type: 'singleSelect', flex: 1, editable: true, valueOptions: ['United Kingdom', 'Spain', 'Brazil']
+  },
+
   ];
 
 
