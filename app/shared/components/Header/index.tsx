@@ -6,7 +6,7 @@ export default function Header() {
     const user = useUser();
     return (
       <header className="flex bg-slate-800 p-4 text-white">
-        <div class="grid grid-cols-12 gap-4">
+        <div class="grid grid-cols-12 gap-6">
           <div class="col-span-2">
             <Link to="/meals">Meal Plan</Link>
           </div>
