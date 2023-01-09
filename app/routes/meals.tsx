@@ -6,8 +6,6 @@ import { getMeals } from "~/models/meal.server";
 import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
 import Header from "../shared/components/Header";
-import { format } from 'date-fns'
-
 
 type LoaderData = {
   mealItems: Meal[];
@@ -25,7 +23,7 @@ export default function Index() {
   let rows = data.mealItems.map((meal) => {
     return {
         id: meal.id,
-        date: format(Date(meal.date), 'dd/mm/yyyy'),
+        date: meal.date,
         lunch: meal.lunch,
         dinner: meal.dinner,
     }
