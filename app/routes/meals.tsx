@@ -11,6 +11,18 @@ type LoaderData = {
   mealItems: Meal[];
 };
 
+const getWeekday = (dateFormat) => {
+  // split date in non-digit chaarcters
+  let [d, m, y] = dateFormat.split(/\D/);
+
+  //put them in Date method
+  const date = new Date(y, m - 1, d)
+  //and return weekday in long format
+  const weekday = date.toLocaleString("default", { weekday: "long" })
+  
+  return weekday
+}
+
 export async function loader ({ request }: LoaderArgs) {
   const userId = await requireUserId(request);
   const mealItems = await getMeals({ userId });
@@ -24,12 +36,14 @@ export default function Index() {
     return {
         id: meal.id,
         date: meal.date,
+        day: getWeekday(meal.date),
         lunch: meal.lunch,
         dinner: meal.dinner,
     }
 })
   let columns = [
     {field: 'date', headerName: 'Date', flex: 1},
+    {field: 'day', headerName: 'Day', flex: 1},
     {field: 'lunch', headerName: 'Lunch', flex: 1, editable: true},
     {field: 'dinner', headerName: 'Dinner', flex: 1, editable: true},
     {field: 'cuisine',headerName: 'Cuisine', type: 'singleSelect', flex: 1, editable: true, valueOptions: ['Indian', 'Italian', 'Thai']
