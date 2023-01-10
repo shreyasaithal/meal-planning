@@ -7,8 +7,8 @@ export default function Sidebar() {
     return (
         <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
   <div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
-    <div class="flex items-center justify-center h-14 border-b">
-      <div><img src="https://drive.google.com/uc?id=1Ptz2MMR19cbWmwmKVB1bZRtW3AvtBfuk"></img></div>
+    <div class="flex items-center justify-center h-28 border-b">
+      <div><img src="https://drive.google.com/uc?id=1Ptz2MMR19cbWmwmKVB1bZRtW3AvtBfuk" width={100} height={100}></img></div>
     </div>
     <div class="overflow-y-auto overflow-x-hidden flex-grow">
       <ul class="flex flex-col py-4 space-y-1">
