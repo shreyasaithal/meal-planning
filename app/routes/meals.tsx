@@ -44,11 +44,8 @@ export default function Index() {
   let columns = [
     {field: 'date', headerName: 'Date', flex: 1},
     {field: 'day', headerName: 'Day', flex: 1},
-    {field: 'lunch', headerName: 'Lunch', flex: 1, editable: true},
-    {field: 'dinner', headerName: 'Dinner', flex: 1, editable: true},
-    {field: 'cuisine',headerName: 'Cuisine', type: 'singleSelect', flex: 1, editable: true, valueOptions: ['Indian', 'Italian', 'Thai']
-  },
-
+    {field: 'lunch', headerName: 'Lunch', flex: 2, editable: true},
+    {field: 'dinner', headerName: 'Dinner', flex: 2, editable: true},
   ];
 
 
