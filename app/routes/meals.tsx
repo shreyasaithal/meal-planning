@@ -16,7 +16,7 @@ const getWeekday = (dateFormat) => {
   let [d, m, y] = dateFormat.split(/\D/);
 
   //put them in Date method
-  const date = new Date(y, m - 1, d)
+  const date = new Date(y, m , d)
   //and return weekday in long format
   const weekday = date.toLocaleString("default", { weekday: "long" })
   
