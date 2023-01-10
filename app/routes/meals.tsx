@@ -13,10 +13,10 @@ type LoaderData = {
 
 const getWeekday = (dateFormat) => {
   // split date in non-digit chaarcters
-  let [d, m, y] = dateFormat.split(/\D/);
+  let [y, m, d] = dateFormat.split(/\D/);
 
   //put them in Date method
-  const date = new Date(y, m , d)
+  const date = new Date(y, m -1 , d)
   //and return weekday in long format
   const weekday = date.toLocaleString("default", { weekday: "long" })
   
