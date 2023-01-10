@@ -6,6 +6,7 @@ import { getMeals } from "~/models/meal.server";
 import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
 import Header from "../shared/components/Header";
+import Sidebar from "../shared/components/Sidebar";
 
 type LoaderData = {
   mealItems: Meal[];
@@ -51,7 +52,7 @@ export default function Index() {
 
  return (
     <div>
-        <Header />
+        <Sidebar />
         <section id="DataGrid" style={{ height: 550, width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
             <DataGrid checkboxSelection={true} rows={rows} columns={columns} sx={{ m: 2 }}/>
         </section>
