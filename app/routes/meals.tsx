@@ -51,10 +51,10 @@ export default function Index() {
 
 
  return (
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-5 gap-4">
         <Sidebar />
-        <div class="col-span-2">
-        <section id="DataGrid" style={{ height: '100%', width: '90%', marginLeft: 'auto', marginRight: 'auto' }}>
+        <div class="col-span-4">
+        <section id="DataGrid" style={{ height: '90%' }}>
             <DataGrid checkboxSelection={true} rows={rows} columns={columns} sx={{ m: 2 }}/>
         </section>
         </div>    
