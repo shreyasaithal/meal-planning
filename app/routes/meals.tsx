@@ -30,6 +30,21 @@ export async function loader ({ request }: LoaderArgs) {
   return json({ mealItems });
 };
 
+export async const handleProcessRowUpdate = (newRow: any) => {
+  const updatedRow = { ...newRow, isNew: false };
+  console.log(updatedRow);
+
+  const id= updatedRow.id;
+  const lunch = updatedRow.lunch;
+  const dinner = updatedRow.dinner;
+
+  const ret = await updateMeals({id,lunch,dinner});
+  console.log(ret);
+  //handle send data to api
+  return updatedRow;
+
+}
+
 export default function Index() {
   const data = useLoaderData<typeof loader>() as LoaderData;
   
@@ -49,20 +64,6 @@ export default function Index() {
     {field: 'dinner', headerName: 'Dinner', flex: 2, editable: true},
   ];
 
-  const handleProcessRowUpdate = (newRow: any) => {
-    const updatedRow = { ...newRow, isNew: false };
-    console.log(updatedRow);
-
-    const id= updatedRow.id;
-    const lunch = updatedRow.lunch;
-    const dinner = updatedRow.dinner;
-
-    const ret = await updateMeals({id,lunch,dinner});
-    console.log(ret);
-    //handle send data to api
-    return updatedRow;
-
-  }
  return (
     <div class="grid grid-cols-6 gap-4">
         <Sidebar />
