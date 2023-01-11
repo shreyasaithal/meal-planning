@@ -52,13 +52,12 @@ export default function Index() {
   const handleProcessRowUpdate = (newRow: any) => {
     const updatedRow = { ...newRow, isNew: false };
     console.log(updatedRow);
+
     const id= updatedRow.id;
-    const updates = {
-      id: updatedRow.id,
-      lunch: updatedRow.lunch,
-      dinner: updatedRow.dinner,
-    };
-    updateMeals({id,updates});
+    const lunch = updatedRow.lunch;
+    const dinner = updatedRow.dinner;
+
+    updateMeals({id,lunch,dinner});
     //handle send data to api
     return updatedRow;
 
