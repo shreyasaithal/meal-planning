@@ -50,7 +50,7 @@ export default function Index() {
   ];
 
 
-  const handleProcessRowUpdateError = React.useCallback((error: Error) => {console.log(error);});
+  //const handleProcessRowUpdateError = React.useCallback((error: Error) => {console.log(error);});
  return (
     <div class="grid grid-cols-6 gap-4">
         <Sidebar />
