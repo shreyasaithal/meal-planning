@@ -51,7 +51,7 @@ export default function Index() {
 
 
  return (
-    <div class="grid grid-cols-5 gap-4">
+    <div class="grid grid-cols-6 gap-4">
         <Sidebar />
         <div class="col-span-3">
         <section id="DataGrid" style={{ height: '90%' }}>
