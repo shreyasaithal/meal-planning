@@ -63,7 +63,7 @@ export default function Index() {
             processRowUpdate={(props, event) => {
               console.log(props);
             }}
-            onProcessRowUpdateError={handleProcessRowUpdateError}
+            onProcessRowUpdateError={console.log("error")}
             sx={{ m: 2 }}/>
         </section>
         </div>    
