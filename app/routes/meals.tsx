@@ -30,7 +30,7 @@ export async function loader ({ request }: LoaderArgs) {
   return json({ mealItems });
 };
 
-export async const handleProcessRowUpdate = (newRow: any) => {
+const handleProcessRowUpdate = (newRow: any) => {
   const updatedRow = { ...newRow, isNew: false };
   console.log(updatedRow);
 
@@ -38,7 +38,7 @@ export async const handleProcessRowUpdate = (newRow: any) => {
   const lunch = updatedRow.lunch;
   const dinner = updatedRow.dinner;
 
-  const ret = await updateMeals({id,lunch,dinner});
+  const ret = updateMeals({id,lunch,dinner});
   console.log(ret);
   //handle send data to api
   return updatedRow;
