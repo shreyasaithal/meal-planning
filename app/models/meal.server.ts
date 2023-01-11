@@ -18,15 +18,7 @@ export async function getMeals({ userId }: { userId: User["id"] }) {
   return data;
 }
 
-export async function updateMeals({
-  id,
-  lunch,
-  dinner
-})  
+export async function updateMeals()
 {
-  const { error } = await supabase
-    .from("meals")
-    .update({"lunch":lunch,"dinner":dinner})
-    .eq("id",id);
-
+  console.log('in function');
 }
