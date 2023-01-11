@@ -55,7 +55,7 @@ export default function Index() {
         <Sidebar />
         <div class="col-span-3">
         <GridToolbarContainer>
-        <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
+        <Button color="primary" startIcon={<AddIcon />}>
         Add record
         </Button>
         </GridToolbarContainer>
