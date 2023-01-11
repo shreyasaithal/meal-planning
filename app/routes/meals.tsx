@@ -57,7 +57,7 @@ export default function Index() {
     const lunch = updatedRow.lunch;
     const dinner = updatedRow.dinner;
 
-    const ret = updateMeals({id,lunch,dinner});
+    const ret = updateMeals(id,lunch,dinner);
     console.log(ret);
     //handle send data to api
     return updatedRow;
