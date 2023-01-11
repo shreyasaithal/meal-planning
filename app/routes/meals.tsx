@@ -59,7 +59,7 @@ export default function Index() {
             rows={rows} 
             columns={columns} 
             experimentalFeatures={{ newEditingApi: true }}
-            onCellEditCommit={(props, event) => {
+            onCellEditStop={(props, event) => {
               console.log(props);
             }}
             sx={{ m: 2 }}/>
