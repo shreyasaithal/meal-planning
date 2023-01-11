@@ -49,8 +49,12 @@ export default function Index() {
     {field: 'dinner', headerName: 'Dinner', flex: 2, editable: true},
   ];
 
-  const handleProcessRowUpdate = (newRow, oldRow) => {
-    console.log(newRow);
+  const handleProcessRowUpdate = (newRow: any) => {
+    const updatedRow = { ...newRow, isNew: false };
+    console.log(updatedRow);
+    //handle send data to api
+    return updatedRow;
+
   }
  return (
     <div class="grid grid-cols-6 gap-4">
