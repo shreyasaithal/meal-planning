@@ -23,7 +23,6 @@ export async function updateMeals({
   lunch,
   dinner,
 })  
-console.log('in function');
 {
   const { data, error } = await supabase
     .from("meals")
@@ -34,5 +33,5 @@ console.log('in function');
     return data;
   }
 
-  return null;
+  return error;
 }
