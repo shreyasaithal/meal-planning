@@ -54,8 +54,19 @@ export default function Index() {
     <div class="grid grid-cols-5 gap-4">
         <Sidebar />
         <div class="col-span-3">
+        <GridToolbarContainer>
+        <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
+        Add record
+        </Button>
+        </GridToolbarContainer>
         <section id="DataGrid" style={{ height: '90%' }}>
-            <DataGrid checkboxSelection={true} rows={rows} columns={columns} sx={{ m: 2 }}/>
+            <DataGrid 
+            checkboxSelection={true} 
+            rows={rows} 
+            columns={columns} 
+            experimentalFeatures={{ newEditingApi: true }}
+
+            sx={{ m: 2 }}/>
         </section>
         </div>    
 
