@@ -58,7 +58,7 @@ export default function Index() {
       lunch: updatedRow.lunch,
       dinner: updatedRow.dinner,
     };
-    await updateMeals({id,updates});
+    updateMeals({id,updates});
     //handle send data to api
     return updatedRow;
 
