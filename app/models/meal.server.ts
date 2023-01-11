@@ -22,10 +22,10 @@ export async function updateMeals({
   id,
   lunch,
   dinner,
-}: Pick<Meal, "id"> & { userId: User["id"] }) {
+})  {
   const { data, error } = await supabase
     .from("meals")
-    .update("lunch,dinner")
+    .update({lunch:'lunch',dinner:'dinner'})
     .eq("id",id);
 
   if (!error) {
