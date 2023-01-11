@@ -2,7 +2,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { Meal } from "~/models/meal.server";
-import { getMeals } from "~/models/meal.server";
+import { getMeals,updateMeals } from "~/models/meal.server";
 import { requireUserId } from "~/session.server";
 import { useUser } from "~/utils";
 import Header from "../shared/components/Header";
@@ -52,6 +52,13 @@ export default function Index() {
   const handleProcessRowUpdate = (newRow: any) => {
     const updatedRow = { ...newRow, isNew: false };
     console.log(updatedRow);
+    const id= updatedRow.id;
+    const updates = {
+      id: updatedRow.id,
+      lunch: updatedRow.lunch,
+      dinner: updatedRow.dinner,
+    };
+    await updateMeals({id,updates});
     //handle send data to api
     return updatedRow;
 

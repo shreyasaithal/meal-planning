@@ -17,3 +17,19 @@ export async function getMeals({ userId }: { userId: User["id"] }) {
 
   return data;
 }
+
+export async function updateMeals({
+  id,
+  updates,
+}: Pick<Meal, "id"> & { userId: User["id"] }) {
+  const { data, error } = await supabase
+    .from("meals")
+    .update(updates)
+    .eq("id",id);
+
+  if (!error) {
+    return data;
+  }
+
+  return null;
+}
