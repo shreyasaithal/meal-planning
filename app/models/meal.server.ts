@@ -18,7 +18,10 @@ export async function getMeals({ userId }: { userId: User["id"] }) {
   return data;
 }
 
-export async function updateMeals()
+export async function updateMeals({id,lunch,dinner})
 {
-  return "hello";
+  const { error } = await supabase
+  .from('meals')
+  .update({ lunch: lunch, dinner:dinner })
+  .eq('id', id)
 }

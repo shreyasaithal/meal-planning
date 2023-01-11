@@ -37,7 +37,7 @@ const handleProcessRowUpdate = (newRow: any) => {
   const id= updatedRow.id;
   const lunch = updatedRow.lunch;
   const dinner = updatedRow.dinner;
-  console.log(id);
+  console.log(dinner);
   //const h = updateMeals();
   //console.log(h);
   //handle send data to api
