@@ -49,8 +49,9 @@ export default function Index() {
     {field: 'dinner', headerName: 'Dinner', flex: 2, editable: true},
   ];
 
-
-  //const handleProcessRowUpdateError = React.useCallback((error: Error) => {console.log(error);});
+  const handleProcessRowUpdate = (newRow, oldRow) => {
+    console.log(newRow);
+  }
  return (
     <div class="grid grid-cols-6 gap-4">
         <Sidebar />
@@ -60,9 +61,7 @@ export default function Index() {
             rows={rows} 
             columns={columns} 
             experimentalFeatures={{ newEditingApi: true }}
-            processRowUpdate={(props, event) => {
-              console.log(props);
-            }}
+            processRowUpdate={handleProcessRowUpdate}
             onProcessRowUpdateError={console.log("error")}
             sx={{ m: 2 }}/>
         </section>
