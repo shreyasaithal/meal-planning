@@ -50,6 +50,7 @@ export default function Index() {
   ];
 
 
+  const handleProcessRowUpdateError = React.useCallback((error: Error) => {console.log(error);};
  return (
     <div class="grid grid-cols-6 gap-4">
         <Sidebar />
@@ -62,6 +63,7 @@ export default function Index() {
             processRowUpdate={(props, event) => {
               console.log(props);
             }}
+            onProcessRowUpdateError={handleProcessRowUpdateError}
             sx={{ m: 2 }}/>
         </section>
         </div>    
