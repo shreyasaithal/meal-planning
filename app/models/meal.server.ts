@@ -20,5 +20,5 @@ export async function getMeals({ userId }: { userId: User["id"] }) {
 
 export async function updateMeals()
 {
-  console.log('in function');
+  return "hello";
 }
