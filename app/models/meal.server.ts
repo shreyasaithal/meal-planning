@@ -26,7 +26,7 @@ export async function updateMeals({
 {
   const { error } = await supabase
     .from("meals")
-    .update({lunch:'lunch',dinner:'dinner'})
+    .update({"lunch":lunch,"dinner":dinner})
     .eq("id",id);
 
 }
