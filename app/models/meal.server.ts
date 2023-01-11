@@ -22,7 +22,9 @@ export async function updateMeals({
   id,
   lunch,
   dinner,
-})  {
+})  
+console.log('in function');
+{
   const { data, error } = await supabase
     .from("meals")
     .update({lunch:'lunch',dinner:'dinner'})
