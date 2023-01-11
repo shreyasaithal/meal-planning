@@ -56,11 +56,12 @@ export default function Index() {
         <div class="col-span-3">
         <section id="DataGrid" style={{ height: '90%' }}>
             <DataGrid 
-            checkboxSelection={true} 
             rows={rows} 
             columns={columns} 
             experimentalFeatures={{ newEditingApi: true }}
-
+            onCellEditCommit={(props, event) => {
+              console.log(props);
+            }}
             sx={{ m: 2 }}/>
         </section>
         </div>    
